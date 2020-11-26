@@ -5,14 +5,14 @@
         <style type="text/css">
             /* Shared styles */
             body {
-                font-family: HelveticaNeue, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-size: 16.0px;
                 color: #34302e;
                 margin: 0.25in;
             }
             .name {
                 font-size: 18.0px;
-                font-family: Futura, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-weight: normal;
                 margin: 0 0 10px 0;
             }
@@ -40,8 +40,14 @@
                 text-transform: uppercase;
                 margin: 10px 0;
             }
+            
             .ingredients p {
                 margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
             }
             .clear {
                 clear:both;
@@ -55,24 +61,22 @@
                 line-height: 130%;
             }
             .photobox {
+                
                 float: left;
                 margin-right: 14px;
+                
+                
             }
             .photo {
-                
-                
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 140.0px;
+                max-height: 140.0px;
                 width: auto;
                 height: auto;
-                
             }
-            .columnbox {
-                
-            }
+            
             .inline-image {
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 25%;
+                max-height: 25%;
                 width: auto;
                 height: auto;
             }
@@ -83,11 +87,22 @@
             .pswp__caption__center {
                 text-align: center !important;
             }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
         </style>
     </head>
     <body>
         <!-- Recipe -->
-<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
     
     <div class="infobox">
 
@@ -135,11 +150,13 @@
         </p>
         
         
+        
         <div class="clear"></div>
+        
 
     </div>
     
-    <div class="columnbox">
+    <div class="left-column">
 
         <!-- Ingredients -->
         
@@ -156,7 +173,9 @@
 
     </div>
     
-    <!-- Descriptino -->
+    <div class="right-column">
+    
+    <!-- Description -->
     
 
     <!-- Directions -->
@@ -164,7 +183,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Directions</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line">Slice your eggplant into thin rounds just under 1/2 inch (not quite 1/4 inch). Then sprinkle both sides of the flesh with a little sea salt and arrange in a colander to help draw out some of the moisture and bitterness. Let set for <span class='timer' time='600.0'>10-15 minutes</span>. Then rinse with cool water and thoroughly pat dry between two clean towels.</p><p class="line">Preheat oven to high broil and place an oven rack near the top of the oven. Arrange the dried eggplant rounds on a baking sheet lightly spritzed with non-stick spray and drizzle both sides of the eggplant with a little olive oil. Sprinkle with a very small amount of salt.</p><p class="line">Broil on high for <span class='timer' time='240.0'>4-5 minutes </span>on each side, watching carefully as to not let them burn. Flip at the halfway point to ensure even cooking. Once the eggplant appears tender and both sides have golden brown color, remove from the oven and wrap loosely in foil to steam.</p><p class="line">After a few minutes, unwrap and peel the eggplant skin away. It should come right off. If you pack your roasted eggplant into a 1-cup measuring cup, it will be almost 1 cup (amount as original recipe is written // adjust if altering batch size).</p><p class="line">Place eggplant in a blender with almond milk (starting with the lesser amount), nutritional yeast (starting with the lesser amount), minced garlic, cumin, chili powder and cornstarch and blend on high until smooth and creamy. Taste and adjust seasonings as needed. I added a pinch more sea salt and a little more nutritional yeast. To thin, add more almond milk.</p><p class="line">Transfer to a small saucepan and warm over medium to medium-high heat until slightly thickened and bubbly - about <span class='timer' time='300.0'>5 minutes</span>. The longer you go the thicker it will become.</p><p class="line">NOTE: If it isn’t looking as thick as you want, thicken with a slurry of cornstarch by adding an additional 1 tsp cornstarch to a small bowl with a little almond milk and 2-3 Tbsp of the cheese mixture (amounts as original recipe is written // adjust if altering batch size). Whisk to combine and then stir back into the pot. This should thicken it right up.</p><p class="line">Once hot and thickened, remove from heat and stir in DRAINED salsa or Rotel. Don’t put the liquid in or it will make it runny. Pour into a serving dish and top with a little smoked paprika and hot sauce for flavor/color.</p><p class="line">Serve with chips, crackers or veggies. Keep warm in a mini crockpot or over a tea light warmer if you have one. Microwaves well.</p>
+            <p class="line">Slice your eggplant into thin rounds just under 1/2 inch (not quite 1/4 inch). Then sprinkle both sides of the flesh with a little sea salt and arrange in a colander to help draw out some of the moisture and bitterness. Let set for 10-15 minutes. Then rinse with cool water and thoroughly pat dry between two clean towels.</p><p class="line">Preheat oven to high broil and place an oven rack near the top of the oven. Arrange the dried eggplant rounds on a baking sheet lightly spritzed with non-stick spray and drizzle both sides of the eggplant with a little olive oil. Sprinkle with a very small amount of salt.</p><p class="line">Broil on high for 4-5 minutes on each side, watching carefully as to not let them burn. Flip at the halfway point to ensure even cooking. Once the eggplant appears tender and both sides have golden brown color, remove from the oven and wrap loosely in foil to steam.</p><p class="line">After a few minutes, unwrap and peel the eggplant skin away. It should come right off. If you pack your roasted eggplant into a 1-cup measuring cup, it will be almost 1 cup (amount as original recipe is written // adjust if altering batch size).</p><p class="line">Place eggplant in a blender with almond milk (starting with the lesser amount), nutritional yeast (starting with the lesser amount), minced garlic, cumin, chili powder and cornstarch and blend on high until smooth and creamy. Taste and adjust seasonings as needed. I added a pinch more sea salt and a little more nutritional yeast. To thin, add more almond milk.</p><p class="line">Transfer to a small saucepan and warm over medium to medium-high heat until slightly thickened and bubbly – about 5 minutes. The longer you go the thicker it will become.</p><p class="line">NOTE: If it isn’t looking as thick as you want, thicken with a slurry of cornstarch by adding an additional 1 tsp cornstarch to a small bowl with a little almond milk and 2-3 Tbsp of the cheese mixture (amounts as original recipe is written // adjust if altering batch size). Whisk to combine and then stir back into the pot. This should thicken it right up.</p><p class="line">Once hot and thickened, remove from heat and stir in DRAINED salsa or Rotel. Don’t put the liquid in or it will make it runny. Pour into a serving dish and top with a little smoked paprika and hot sauce for flavor/color.</p><p class="line">Serve with chips, crackers or veggies. Keep warm in a mini crockpot or over a tea light warmer if you have one. Microwaves well.</p>
         </div>
     </div>
     
@@ -197,84 +216,15 @@
 
     
     
-</div>
-
-        
-        <!-- PhotoSwipe gallery -->
-
-<link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
-<link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
-<script src="Resources/PhotoSwipe/photoswipe.min.js"></script>
-<script src="Resources/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close"></button>
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
     </div>
+    
+    <div class="clear"></div>
+
 </div>
 
-<script type="text/javascript">
-    var openPhotoSwipe = function(event) {
-        var pswp = document.querySelector('.pswp');
-        
-        var element = event.target;
-        var src = element.getAttribute('src');
-        
-        // build items array
-        var items = [
-            
-        ];
-        
-        var index = 0;
-        for (var i=0; i<items.length; i++) {
-            var item = items[i];
-            if (item.src == src) {
-                index = i;
-            }
-        }
-                         
-        var options = {
-            index: index,
-            history: false,
-            focus: true,
-            captionEl: true,
-            fullscreenEl: false,
-            zoomEl: false,
-            shareEl: false,
-            preloaderEl: false,
-            bgOpacity: 0.9,
-            showHideOpacity: true
-        };
-                             
-        var gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
-        gallery.init();
-    };
 
-    var elements = document.querySelectorAll('.photoswipe');
-    for (var i=0; i<elements.length; i++) {
-        var element = elements[i];
-        element.addEventListener('click', openPhotoSwipe);
-    }
-</script>
 
-        
+
+
     </body>
 </html>

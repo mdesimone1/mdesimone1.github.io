@@ -5,14 +5,14 @@
         <style type="text/css">
             /* Shared styles */
             body {
-                font-family: HelveticaNeue, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-size: 16.0px;
                 color: #34302e;
                 margin: 0.25in;
             }
             .name {
                 font-size: 18.0px;
-                font-family: Futura, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-weight: normal;
                 margin: 0 0 10px 0;
             }
@@ -40,8 +40,14 @@
                 text-transform: uppercase;
                 margin: 10px 0;
             }
+            
             .ingredients p {
                 margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
             }
             .clear {
                 clear:both;
@@ -55,24 +61,22 @@
                 line-height: 130%;
             }
             .photobox {
+                
                 float: left;
                 margin-right: 14px;
+                
+                
             }
             .photo {
-                
-                
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 140.0px;
+                max-height: 140.0px;
                 width: auto;
                 height: auto;
-                
             }
-            .columnbox {
-                
-            }
+            
             .inline-image {
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 25%;
+                max-height: 25%;
                 width: auto;
                 height: auto;
             }
@@ -83,11 +87,22 @@
             .pswp__caption__center {
                 text-align: center !important;
             }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
         </style>
     </head>
     <body>
         <!-- Recipe -->
-<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
     
     <div class="infobox">
 
@@ -139,11 +154,13 @@
         </p>
         
         
+        
         <div class="clear"></div>
+        
 
     </div>
     
-    <div class="columnbox">
+    <div class="left-column">
 
         <!-- Ingredients -->
         
@@ -160,7 +177,9 @@
 
     </div>
     
-    <!-- Descriptino -->
+    <div class="right-column">
+    
+    <!-- Description -->
     
 
     <!-- Directions -->
@@ -168,7 +187,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Directions</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line">Chop eggplant in to 1cm cubes.</p><p class="line">Heat a small fry pan and a good lug of olive oil, around 2 tablespoons.</p><p class="line">Season the eggplant with sea salt and add it to the pan to cook on low-medium heat until slightly creamy but still holding it&apos;s shape - about <span class='timer' time='480.0'>8 minutes</span>. Test to make sure they are not still woody. Continue to cook if needed.</p><p class="line">Remove from the heat and set aside.</p><p class="line">Slice the boiled potatoes in to 1/2 cm thick slices.</p><p class="line">In a small mixing bowl combine the white beans, mayonnaise and harissa paste.</p><p class="line">Slice the dill pickles in to vertical slices around 1/2 cm thick.</p><p class="line">Lay the pitas out on a board or plate to build the Sabich sandwich.</p><p class="line">Smear a good amount of hummus on to each bread.</p><p class="line">Cover half the pita with a layer of sliced potato.</p><p class="line">Lay sliced pickle over the potato using a whole pickle per sandwich</p><p class="line">Spoon 2 tablespoons of white bean mix on to the pickle.</p><p class="line">Add 2-3 tablespoons of cooked eggplant.</p><p class="line">Add 2 heaped tablespoons of the tabbouleh.</p><p class="line">Fold the pita in half and serve.</p>
+            <p class="line">Chop eggplant in to 1cm cubes.</p><p class="line">Heat a small fry pan and a good lug of olive oil, around 2 tablespoons.</p><p class="line">Season the eggplant with sea salt and add it to the pan to cook on low-medium heat until slightly creamy but still holding it&apos;s shape - about 8 minutes. Test to make sure they are not still woody. Continue to cook if needed.</p><p class="line">Remove from the heat and set aside.</p><p class="line">Slice the boiled potatoes in to 1/2 cm thick slices.</p><p class="line">In a small mixing bowl combine the white beans, mayonnaise and harissa paste.</p><p class="line">Slice the dill pickles in to vertical slices around 1/2 cm thick.</p><p class="line">Lay the pitas out on a board or plate to build the Sabich sandwich.</p><p class="line">Smear a good amount of hummus on to each bread.</p><p class="line">Cover half the pita with a layer of sliced potato.</p><p class="line">Lay sliced pickle over the potato using a whole pickle per sandwich</p><p class="line">Spoon 2 tablespoons of white bean mix on to the pickle.</p><p class="line">Add 2-3 tablespoons of cooked eggplant.</p><p class="line">Add 2 heaped tablespoons of the tabbouleh.</p><p class="line">Fold the pita in half and serve.</p>
         </div>
     </div>
     
@@ -192,10 +211,15 @@
 
     
     
+    </div>
+    
+    <div class="clear"></div>
+
 </div>
 
-        
-        <!-- PhotoSwipe gallery -->
+
+<!-- Photo gallery is only included when exporting. -->
+<!-- PhotoSwipe gallery -->
 
 <link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
 <link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
@@ -278,6 +302,9 @@
     }
 </script>
 
-        
+
+
+
+
     </body>
 </html>

@@ -5,14 +5,14 @@
         <style type="text/css">
             /* Shared styles */
             body {
-                font-family: HelveticaNeue, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-size: 16.0px;
                 color: #34302e;
                 margin: 0.25in;
             }
             .name {
                 font-size: 18.0px;
-                font-family: Futura, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-weight: normal;
                 margin: 0 0 10px 0;
             }
@@ -40,8 +40,14 @@
                 text-transform: uppercase;
                 margin: 10px 0;
             }
+            
             .ingredients p {
                 margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
             }
             .clear {
                 clear:both;
@@ -55,24 +61,22 @@
                 line-height: 130%;
             }
             .photobox {
+                
                 float: left;
                 margin-right: 14px;
+                
+                
             }
             .photo {
-                
-                
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 140.0px;
+                max-height: 140.0px;
                 width: auto;
                 height: auto;
-                
             }
-            .columnbox {
-                
-            }
+            
             .inline-image {
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 25%;
+                max-height: 25%;
                 width: auto;
                 height: auto;
             }
@@ -83,11 +87,22 @@
             .pswp__caption__center {
                 text-align: center !important;
             }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
         </style>
     </head>
     <body>
         <!-- Recipe -->
-<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
     
     <div class="infobox">
 
@@ -137,11 +152,13 @@
         </p>
         
         
+        
         <div class="clear"></div>
+        
 
     </div>
     
-    <div class="columnbox">
+    <div class="left-column">
 
         <!-- Ingredients -->
         
@@ -158,7 +175,9 @@
 
     </div>
     
-    <!-- Descriptino -->
+    <div class="right-column">
+    
+    <!-- Description -->
     
 
     <!-- Directions -->
@@ -166,7 +185,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Directions</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line">Put the raw buckwheat groats and the apple cider in a bowl and cover with fresh water to soak overnight.</p><p class="line">The next day pre-heat oven to 190 degrees C.</p><p class="line">Drain and rinse the buckwheat and place in the blender with 2/3 cup water. Blend until smooth.</p><p class="line">Add the Teff flour and baking powder and pulse the blender until combined and smooth.</p><p class="line">Pour the batter in to a bowl and add salt and spices. Set aside.</p><p class="line">Place the cauliflower in a food processor and pulse to a rough pieces, around 1.5 cm.</p><p class="line">Put the cauliflower on to a roasting tray, drizzle with oil, toss with sumac, cumin and sea salt and roast in the oven for <span class='timer' time='1200.0'>20 minutes </span>or until beginning brown. Remove from oven to cool slightly.</p><p class="line">Add peas, spinach and cauliflower to the fritter batter and stir to combine.</p><p class="line">Place the avocado, coriander, lemon and salt in a processor or blender and blender until smooth. Add a tiny amount of water if needed. Set aside.</p><p class="line">Heat a large fry pan before adding oil. When the oil is hot, turn the heat down to low/medium.</p><p class="line">Spoon 2 tablespoons of the batter and vegetables to make a fritter round Repeat to make two or three fritters.</p><p class="line">Cook for <span class='timer' time='180.0'>three minutes </span>before turning the fritter over and cooking on the other side for <span class='timer' time='180.0'>three to four minutes </span>or until beautifully golden. Sprinkle each cooked fritter with a tiny pinch of cumin and a crack of sea salt.</p><p class="line">Repeat with remaining batter.</p><p class="line">To serve, dollop a few spoons of the avocado puree on to the plate followed by a stack of two or three fritters.</p><p class="line">In a small bowl toss the watercress or baby spinach with a dash of olive oil, a splash of lemon juice and sea salt. Place a small handful on the top of the fritters and serve.</p>
+            <p class="line">Put the raw buckwheat groats and the apple cider in a bowl and cover with fresh water to soak overnight.</p><p class="line">The next day pre-heat oven to 190 degrees C.</p><p class="line">Drain and rinse the buckwheat and place in the blender with 2/3 cup water. Blend until smooth.</p><p class="line">Add the Teff flour and baking powder and pulse the blender until combined and smooth.</p><p class="line">Pour the batter in to a bowl and add salt and spices. Set aside.</p><p class="line">Place the cauliflower in a food processor and pulse to a rough pieces, around 1.5 cm.</p><p class="line">Put the cauliflower on to a roasting tray, drizzle with oil, toss with sumac, cumin and sea salt and roast in the oven for 20 minutes or until beginning brown. Remove from oven to cool slightly.</p><p class="line">Add peas, spinach and cauliflower to the fritter batter and stir to combine.</p><p class="line">Place the avocado, coriander, lemon and salt in a processor or blender and blender until smooth. Add a tiny amount of water if needed. Set aside.</p><p class="line">Heat a large fry pan before adding oil. When the oil is hot, turn the heat down to low/medium.</p><p class="line">Spoon 2 tablespoons of the batter and vegetables to make a fritter round Repeat to make two or three fritters.</p><p class="line">Cook for three minutes before turning the fritter over and cooking on the other side for three to four minutes or until beautifully golden. Sprinkle each cooked fritter with a tiny pinch of cumin and a crack of sea salt.</p><p class="line">Repeat with remaining batter.</p><p class="line">To serve, dollop a few spoons of the avocado puree on to the plate followed by a stack of two or three fritters.</p><p class="line">In a small bowl toss the watercress or baby spinach with a dash of olive oil, a splash of lemon juice and sea salt. Place a small handful on the top of the fritters and serve.</p>
         </div>
     </div>
     
@@ -190,10 +209,15 @@
 
     
     
+    </div>
+    
+    <div class="clear"></div>
+
 </div>
 
-        
-        <!-- PhotoSwipe gallery -->
+
+<!-- Photo gallery is only included when exporting. -->
+<!-- PhotoSwipe gallery -->
 
 <link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
 <link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
@@ -276,6 +300,9 @@
     }
 </script>
 
-        
+
+
+
+
     </body>
 </html>

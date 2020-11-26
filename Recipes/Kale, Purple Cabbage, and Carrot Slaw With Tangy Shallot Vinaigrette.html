@@ -5,14 +5,14 @@
         <style type="text/css">
             /* Shared styles */
             body {
-                font-family: HelveticaNeue, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-size: 16.0px;
                 color: #34302e;
                 margin: 0.25in;
             }
             .name {
                 font-size: 18.0px;
-                font-family: Futura, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-weight: normal;
                 margin: 0 0 10px 0;
             }
@@ -40,8 +40,14 @@
                 text-transform: uppercase;
                 margin: 10px 0;
             }
+            
             .ingredients p {
                 margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
             }
             .clear {
                 clear:both;
@@ -55,24 +61,22 @@
                 line-height: 130%;
             }
             .photobox {
+                
                 float: left;
                 margin-right: 14px;
+                
+                
             }
             .photo {
-                
-                
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 140.0px;
+                max-height: 140.0px;
                 width: auto;
                 height: auto;
-                
             }
-            .columnbox {
-                
-            }
+            
             .inline-image {
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 25%;
+                max-height: 25%;
                 width: auto;
                 height: auto;
             }
@@ -83,11 +87,22 @@
             .pswp__caption__center {
                 text-align: center !important;
             }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
         </style>
     </head>
     <body>
         <!-- Recipe -->
-<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
     
     <div class="infobox">
 
@@ -123,11 +138,13 @@
         </p>
         
         
+        
         <div class="clear"></div>
+        
 
     </div>
     
-    <div class="columnbox">
+    <div class="left-column">
 
         <!-- Ingredients -->
         
@@ -144,7 +161,9 @@
 
     </div>
     
-    <!-- Descriptino -->
+    <div class="right-column">
+    
+    <!-- Description -->
     
 
     <!-- Directions -->
@@ -152,7 +171,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Directions</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line">Rinse the kale and shake/pat dry or dry using a salad spinner. Remove the tough inner ribs. Working in batches, pulse a few times in a food processor until finely chopped (not minced into super tiny pieces, enough to have texture). Pour the chopped kale into a large bowl.</p><p class="line">Remove the tough outer leaves of the head of cabbage. Slice in half and trim away the white, tough inner core. Slice into chunks and load into a food processor, working in batches depending on the size of your food processor. Pulse until finely chopped. Add chopped cabbage to the bowl of kale.</p><p class="line">Peel the carrots and trim the ends. Slice into 1-inch pieces and pulse in a food processor until finely chopped. Add the carrots to the bowl of cabbage and kale.</p><p class="line">In a small mixing bowl, combine the minced shallots and dijon mustard. Add the red wine vinegar and whisk to combine. Very slowly pour in the olive oil, whisking vigorously as you do so, to emulsify the vinaigrette. Season to taste with salt and pepper. Pour over the slaw.</p><p class="line">Toss slaw and dressing until combined and well coated. Cover and chill in the refrigerator for <span class='timer' time='3600.0'>1-2 hours </span>to allow all the flavors to meld. Toss and adjust salt and pepper seasoning before serving.</p>
+            <p class="line">Rinse the kale and shake/pat dry or dry using a salad spinner. Remove the tough inner ribs. Working in batches, pulse a few times in a food processor until finely chopped (not minced into super tiny pieces, enough to have texture). Pour the chopped kale into a large bowl.</p><p class="line">Remove the tough outer leaves of the head of cabbage. Slice in half and trim away the white, tough inner core. Slice into chunks and load into a food processor, working in batches depending on the size of your food processor. Pulse until finely chopped. Add chopped cabbage to the bowl of kale.</p><p class="line">Peel the carrots and trim the ends. Slice into 1-inch pieces and pulse in a food processor until finely chopped. Add the carrots to the bowl of cabbage and kale.</p><p class="line">In a small mixing bowl, combine the minced shallots and dijon mustard. Add the red wine vinegar and whisk to combine. Very slowly pour in the olive oil, whisking vigorously as you do so, to emulsify the vinaigrette. Season to taste with salt and pepper. Pour over the slaw.</p><p class="line">Toss slaw and dressing until combined and well coated. Cover and chill in the refrigerator for 1-2 hours to allow all the flavors to meld. Toss and adjust salt and pepper seasoning before serving.</p>
         </div>
     </div>
     
@@ -167,10 +186,15 @@
 
     
     
+    </div>
+    
+    <div class="clear"></div>
+
 </div>
 
-        
-        <!-- PhotoSwipe gallery -->
+
+<!-- Photo gallery is only included when exporting. -->
+<!-- PhotoSwipe gallery -->
 
 <link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
 <link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
@@ -253,6 +277,9 @@
     }
 </script>
 
-        
+
+
+
+
     </body>
 </html>

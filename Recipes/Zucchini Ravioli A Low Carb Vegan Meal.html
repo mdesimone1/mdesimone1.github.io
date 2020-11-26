@@ -5,14 +5,14 @@
         <style type="text/css">
             /* Shared styles */
             body {
-                font-family: HelveticaNeue, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-size: 16.0px;
                 color: #34302e;
                 margin: 0.25in;
             }
             .name {
                 font-size: 18.0px;
-                font-family: Futura, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-weight: normal;
                 margin: 0 0 10px 0;
             }
@@ -40,8 +40,14 @@
                 text-transform: uppercase;
                 margin: 10px 0;
             }
+            
             .ingredients p {
                 margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
             }
             .clear {
                 clear:both;
@@ -55,24 +61,22 @@
                 line-height: 130%;
             }
             .photobox {
+                
                 float: left;
                 margin-right: 14px;
+                
+                
             }
             .photo {
-                
-                
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 140.0px;
+                max-height: 140.0px;
                 width: auto;
                 height: auto;
-                
             }
-            .columnbox {
-                
-            }
+            
             .inline-image {
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 25%;
+                max-height: 25%;
                 width: auto;
                 height: auto;
             }
@@ -83,11 +87,22 @@
             .pswp__caption__center {
                 text-align: center !important;
             }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
         </style>
     </head>
     <body>
         <!-- Recipe -->
-<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
     
     <div class="infobox">
 
@@ -137,11 +152,13 @@
         </p>
         
         
+        
         <div class="clear"></div>
+        
 
     </div>
     
-    <div class="columnbox">
+    <div class="left-column">
 
         <!-- Ingredients -->
         
@@ -158,7 +175,9 @@
 
     </div>
     
-    <!-- Descriptino -->
+    <div class="right-column">
+    
+    <!-- Description -->
     
 
     <!-- Directions -->
@@ -166,7 +185,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Directions</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line">If you’re making your own marinara, make now and set it to cook while prepping the rest of the meal.</p><p class="line">If you haven’t made <a href="Alfredo Sauce.html">Alfredo Sauce</a> make  it as well, follow the directions in the link.</p><p class="line">Make parmesan by adding all ingredients to a food processor and blending until you get a nice crumble.</p><p class="line">Preheat oven to 350 degrees F (175 C).</p><p class="line">Slice zucchini lengthwise into very thin strips. A mandolin slicer will give you the best results but you can also do it with a sharp knife and some patience! You can throw away the very edge pieces as those are all skin. You should have about 15 thin slices per zucchini.</p><p class="line">Place slices on paper towels and sprinkle a little salt on them to help draw out some of the water. Let them sit while you make ricotta.</p><p class="line">Place cashews, walnuts, garlic, salt, pepper, water, basil and spinach into a food processor. Pulse until you get a ricotta like texture. You want it slightly chunky, on the verge of pureed.</p><p class="line">Wipe of the excess water and salt from the zucchini strips. Take two strips at a time and make an X.</p><p class="line">Place a spoonful of ricotta mixture in the middle where the slices cross.</p><p class="line">Then fold the tips of each slice into the middle one by one (see photo in post) to make a ravioli like pocket. Place them into a 9 x 12 baking dish.</p><p class="line">Once all ravioli are made, drizzle both marinara and Alfredo over the ravioli. You can put as much or as little as you prefer.</p><p class="line">Sprinkle with Hemp Pine Nut parmesan.</p><p class="line">Bake for <span class='timer' time='2100.0'>35 - 40 minutes</span>, until zucchini is fully cooked. Allow to set about <span class='timer' time='300.0'>5-10 minutes </span>after baking. Serve while still nice and warm!</p><p class="line">You can add all basil or all spinach if you prefer, just up to 2 cups of whatever one you do.</p><p class="line">Adjust the salt for both the ricotta and parmesan to your liking. It all depends on the amount of salt used in the other parts of the recipe.</p><p class="line">If you don’t have pine nuts, you can always sub walnuts, although it won’t have that same deep buttery flavor.</p><p class="line">To make this even easier, you can always use a jarred marinara sauce and skip the creamy Alfredo, but it’s highly recommended to make your own of both!</p><p class="line">If you want to use the ricotta as a topping for something, use less liquid to make it thicker and more stable. Start with only a few tablespoons of water and add more to get the texture you like.</p><p class="line">You can also sub the ricotta for this low fat version</p><p class="line"><strong>Tips to prep ahead:</strong></p><p class="line">Make ricotta, parmesan, red sauce and Alfredo.</p><p class="line"><strong>Baby/kid food idea:</strong></p><p class="line">Make sure ravioli is cooked really well. Cut into small pieces and serve with favorite pasta.</p>
+            <p class="line">If you’re making your own marinara, make now and set it to cook while prepping the rest of the meal.</p><p class="line">If you haven’t made <a href="Alfredo Sauce.html">Alfredo Sauce</a> make it as well, follow the directions in the link.</p><p class="line">Make parmesan by adding all ingredients to a food processor and blending until you get a nice crumble.</p><p class="line">Preheat oven to 350 degrees F (175 C).</p><p class="line">Slice zucchini lengthwise into very thin strips. A mandolin slicer will give you the best results but you can also do it with a sharp knife and some patience! You can throw away the very edge pieces as those are all skin. You should have about 15 thin slices per zucchini.</p><p class="line">Place slices on paper towels and sprinkle a little salt on them to help draw out some of the water. Let them sit while you make ricotta.</p><p class="line">Place cashews, walnuts, garlic, salt, pepper, water, basil and spinach into a food processor. Pulse until you get a ricotta like texture. You want it slightly chunky, on the verge of pureed.</p><p class="line">Wipe of the excess water and salt from the zucchini strips. Take two strips at a time and make an X.</p><p class="line">Place a spoonful of ricotta mixture in the middle where the slices cross.</p><p class="line">Then fold the tips of each slice into the middle one by one (see photo in post) to make a ravioli like pocket. Place them into a 9 x 12 baking dish.</p><p class="line">Once all ravioli are made, drizzle both marinara and Alfredo over the ravioli. You can put as much or as little as you prefer.</p><p class="line">Sprinkle with Hemp Pine Nut parmesan.</p><p class="line">Bake for 35 - 40 minutes, until zucchini is fully cooked. Allow to set about 5-10 minutes after baking. Serve while still nice and warm!</p><p class="line">You can add all basil or all spinach if you prefer, just up to 2 cups of whatever one you do.</p><p class="line">Adjust the salt for both the ricotta and parmesan to your liking. It all depends on the amount of salt used in the other parts of the recipe.</p><p class="line">If you don’t have pine nuts, you can always sub walnuts, although it won’t have that same deep buttery flavor.</p><p class="line">To make this even easier, you can always use a jarred marinara sauce and skip the creamy Alfredo, but it’s highly recommended to make your own of both!</p><p class="line">If you want to use the ricotta as a topping for something, use less liquid to make it thicker and more stable. Start with only a few tablespoons of water and add more to get the texture you like.</p><p class="line">You can also sub the ricotta for this low fat version</p><p class="line"><strong>Tips to prep ahead:</strong></p><p class="line">Make ricotta, parmesan, red sauce and Alfredo.</p><p class="line"><strong>Baby/kid food idea:</strong></p><p class="line">Make sure ravioli is cooked really well. Cut into small pieces and serve with favorite pasta.</p>
         </div>
     </div>
     
@@ -199,84 +218,15 @@
 
     
     
-</div>
-
-        
-        <!-- PhotoSwipe gallery -->
-
-<link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
-<link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
-<script src="Resources/PhotoSwipe/photoswipe.min.js"></script>
-<script src="Resources/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close"></button>
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
     </div>
+    
+    <div class="clear"></div>
+
 </div>
 
-<script type="text/javascript">
-    var openPhotoSwipe = function(event) {
-        var pswp = document.querySelector('.pswp');
-        
-        var element = event.target;
-        var src = element.getAttribute('src');
-        
-        // build items array
-        var items = [
-            
-        ];
-        
-        var index = 0;
-        for (var i=0; i<items.length; i++) {
-            var item = items[i];
-            if (item.src == src) {
-                index = i;
-            }
-        }
-                         
-        var options = {
-            index: index,
-            history: false,
-            focus: true,
-            captionEl: true,
-            fullscreenEl: false,
-            zoomEl: false,
-            shareEl: false,
-            preloaderEl: false,
-            bgOpacity: 0.9,
-            showHideOpacity: true
-        };
-                             
-        var gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
-        gallery.init();
-    };
 
-    var elements = document.querySelectorAll('.photoswipe');
-    for (var i=0; i<elements.length; i++) {
-        var element = elements[i];
-        element.addEventListener('click', openPhotoSwipe);
-    }
-</script>
 
-        
+
+
     </body>
 </html>

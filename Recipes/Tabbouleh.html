@@ -5,14 +5,14 @@
         <style type="text/css">
             /* Shared styles */
             body {
-                font-family: HelveticaNeue, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-size: 16.0px;
                 color: #34302e;
                 margin: 0.25in;
             }
             .name {
                 font-size: 18.0px;
-                font-family: Futura, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
                 font-weight: normal;
                 margin: 0 0 10px 0;
             }
@@ -40,8 +40,14 @@
                 text-transform: uppercase;
                 margin: 10px 0;
             }
+            
             .ingredients p {
                 margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
             }
             .clear {
                 clear:both;
@@ -55,24 +61,22 @@
                 line-height: 130%;
             }
             .photobox {
+                
                 float: left;
                 margin-right: 14px;
+                
+                
             }
             .photo {
-                
-                
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 140.0px;
+                max-height: 140.0px;
                 width: auto;
                 height: auto;
-                
             }
-            .columnbox {
-                
-            }
+            
             .inline-image {
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 25%;
+                max-height: 25%;
                 width: auto;
                 height: auto;
             }
@@ -83,11 +87,22 @@
             .pswp__caption__center {
                 text-align: center !important;
             }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
         </style>
     </head>
     <body>
         <!-- Recipe -->
-<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
     
     <div class="infobox">
 
@@ -131,11 +146,13 @@
         </p>
         
         
+        
         <div class="clear"></div>
+        
 
     </div>
     
-    <div class="columnbox">
+    <div class="left-column">
 
         <!-- Ingredients -->
         
@@ -152,7 +169,9 @@
 
     </div>
     
-    <!-- Descriptino -->
+    <div class="right-column">
+    
+    <!-- Description -->
     
 
     <!-- Directions -->
@@ -160,7 +179,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Directions</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line">1. Season tomatoes with 1 teaspoon salt and toss to combine. Transfer to a fine mesh strainer or colander set in a bowl and allow to drain for <span class='timer' time='1200.0'>20 minutes</span>. Reserve liquid.</p><p class="line">2.<br/>Season parsley with remaining 1 teaspoon salt and toss to combine. Transfer to a large mixing bowl lined with paper towels and let stand for <span class='timer' time='1200.0'>20 minutes</span>. Blot parsley with towels to remove excess moisture.</p><p class="line">3.<br/>Bring 1/2 cup reserved tomato water to a boil, then pour over bulgur in a small heatproof bowl and let stand until bulgur is softened, about <span class='timer' time='3600.0'>1 hour </span>(bulgur may still have a slight bite, but will continue to soften in the salad). Drain bulgur of any excess liquid and pat dry with paper towels.</p><p class="line">4.<br/>In a large mixing bowl, stir together tomatoes, parsley, mint, bulgur, scallions, olive oil, lemon juice, coriander seed, and cinnamon until well combined. Season with salt and pepper. Serve tabbouleh with romaine leaves.</p>
+            <p class="line">1. Season tomatoes with 1 teaspoon salt and toss to combine. Transfer to a fine mesh strainer or colander set in a bowl and allow to drain for 20 minutes. Reserve liquid.</p><p class="line">2.<br/>Season parsley with remaining 1 teaspoon salt and toss to combine. Transfer to a large mixing bowl lined with paper towels and let stand for 20 minutes. Blot parsley with towels to remove excess moisture.</p><p class="line">3.<br/>Bring 1/2 cup reserved tomato water to a boil, then pour over bulgur in a small heatproof bowl and let stand until bulgur is softened, about 1 hour (bulgur may still have a slight bite, but will continue to soften in the salad). Drain bulgur of any excess liquid and pat dry with paper towels.</p><p class="line">4.<br/>In a large mixing bowl, stir together tomatoes, parsley, mint, bulgur, scallions, olive oil, lemon juice, coriander seed, and cinnamon until well combined. Season with salt and pepper. Serve tabbouleh with romaine leaves.</p>
         </div>
     </div>
     
@@ -175,10 +194,15 @@
 
     
     
+    </div>
+    
+    <div class="clear"></div>
+
 </div>
 
-        
-        <!-- PhotoSwipe gallery -->
+
+<!-- Photo gallery is only included when exporting. -->
+<!-- PhotoSwipe gallery -->
 
 <link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
 <link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
@@ -261,6 +285,9 @@
     }
 </script>
 
-        
+
+
+
+
     </body>
 </html>
