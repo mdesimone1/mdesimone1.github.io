@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16.0px;
+                color: #34302e;
+                margin: 0.25in;
+            }
+            .name {
+                font-size: 18.0px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14.0px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14.0px;
+            }
+            .metadata {
+                font-size: 14.0px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14.0px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                
+                float: left;
+                margin-right: 14px;
+                
+                
+            }
+            .photo {
+                max-width: 140.0px;
+                max-height: 140.0px;
+                width: auto;
+                height: auto;
+            }
+            
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+        
+        <div class="photobox">
+            
+            <a href="#">
+                <img src="Images/06477469-AA9A-444F-92A7-6F560ED38578-26940-00000D0EF3790F4B/7DD43A24-0769-45BA-B42F-37ABC071F55E-26940-00000D0FD2BD12AF.jpg" itemprop="image" class="photo photoswipe"/>
+            </a>
+            
+            
+        </div>
+        
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Vegan Gravy</h1>
+        
+        <!-- Info -->
+        
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+        
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            
+
+            <!-- Source -->
+            
+        </p>
+        
+        
+        
+        <div class="clear"></div>
+        
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredients</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient"><strong>1</strong>c. Veggie broth</p><p class="line" itemprop="recipeIngredient"><strong>2</strong>T tamari</p><p class="line" itemprop="recipeIngredient"><strong>1</strong>t garlic powder</p><p class="line" itemprop="recipeIngredient"><strong>1/8</strong>t dried thyme</p><p class="line" itemprop="recipeIngredient"><strong>1/4</strong>t dried sage</p><br/><p class="line" itemprop="recipeIngredient"><strong>1</strong>T arrowroot powder</p><p class="line" itemprop="recipeIngredient"><strong>3</strong>T water</p><p></p>
+            </div>
+        </div>
+        
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+        
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+    
+    <div class="descriptionbox">
+        <h3 class="subhead">Description</h3>
+        <div itemprop="description" class="description text">
+            <p>https://www.instagram.com/p/B6GjQrJn1Wt/?igshid=1vevxxu0jpcti</p>
+        </div>
+    </div>
+    
+
+    <!-- Directions -->
+    
+    <div class="directionsbox">
+        <h3 class="subhead">Directions</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">Add all except arrowroot to a pot.<br/>Bring to a boil and simmer for 2 minutes.</p><p class="line">Mix in arrowroot powder with 3T cold water and pour into gravy.</p><p class="line">Whisk to thicken; simmer 3 additional minutes, then serve.<br/></p>
+        </div>
+    </div>
+    
+
+    <!-- Notes -->
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+    
+        <!-- Used in two different places depending on the recipe layout -->
+
+
+    
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+<!-- Photo gallery is only included when exporting. -->
+<!-- PhotoSwipe gallery -->
+
+<link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
+<link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
+<script src="Resources/PhotoSwipe/photoswipe.min.js"></script>
+<script src="Resources/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close"></button>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var openPhotoSwipe = function(event) {
+        var pswp = document.querySelector('.pswp');
+        
+        var element = event.target;
+        var src = element.getAttribute('src');
+        
+        // build items array
+        var items = [
+            
+            {
+                msrc: 'Images/06477469-AA9A-444F-92A7-6F560ED38578-26940-00000D0EF3790F4B/4D1BA4F3-624C-4D13-B644-D48C29FF8698-26940-00000D0FC60A116F.jpg',
+                src: 'Images/06477469-AA9A-444F-92A7-6F560ED38578-26940-00000D0EF3790F4B/4D1BA4F3-624C-4D13-B644-D48C29FF8698-26940-00000D0FC60A116F.jpg',
+                w: 883.0,
+                h: 737.0,
+                title: '1'
+            },
+            
+        ];
+        
+        var index = 0;
+        for (var i=0; i<items.length; i++) {
+            var item = items[i];
+            if (item.src == src) {
+                index = i;
+            }
+        }
+                         
+        var options = {
+            index: index,
+            history: false,
+            focus: true,
+            captionEl: true,
+            fullscreenEl: false,
+            zoomEl: false,
+            shareEl: false,
+            preloaderEl: false,
+            bgOpacity: 0.9,
+            showHideOpacity: true
+        };
+                             
+        var gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    };
+
+    var elements = document.querySelectorAll('.photoswipe');
+    for (var i=0; i<elements.length; i++) {
+        var element = elements[i];
+        element.addEventListener('click', openPhotoSwipe);
+    }
+</script>
+
+
+
+
+
+    </body>
+</html>
